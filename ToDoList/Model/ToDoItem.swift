@@ -32,14 +32,8 @@ struct ToDoItem {
 }
 
 extension ToDoItem {
-    static func parse(json: Any) -> ToDoItem? {
-        // преобразовываем Any в String
-        guard let jsonString = json as? String
-        else { return nil }
-        
-        // формируем Data и пытаемся распарсить json как словарь [String:Any]
-        let data = Data(jsonString.utf8)
-        guard let dict = try? JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]
+    static func parse(json: Data) -> ToDoItem? {
+        guard let dict = try? JSONSerialization.jsonObject(with: json, options: []) as? [String:Any]
         else { return nil }
         
         // извлекаем из словаря значения полей
@@ -76,7 +70,7 @@ extension ToDoItem {
         return ToDoItem(id: id, text: text, importance: importance, deadline: deadline)
     }
     
-    var json: Any? {
+    var json: Data? {
         var dict: [String:Any] = [:]
         dict["id"] = self.id
         dict["text"] = self.text
