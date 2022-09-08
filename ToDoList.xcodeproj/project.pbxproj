@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2AF83F28C7C2DC009FD989 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2AF83E28C7C2DC009FD989 /* ToDoItem.swift */; };
 		0AF1923A28BA11E500FB9C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1923928BA11E500FB9C96 /* AppDelegate.swift */; };
 		0AF1923C28BA11E500FB9C96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1923B28BA11E500FB9C96 /* SceneDelegate.swift */; };
 		0AF1923E28BA11E500FB9C96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF1923D28BA11E500FB9C96 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A2AF83E28C7C2DC009FD989 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		0AF1923628BA11E500FB9C96 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF1923928BA11E500FB9C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AF1923B28BA11E500FB9C96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2AF83D28C7C2CA009FD989 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A2AF83E28C7C2DC009FD989 /* ToDoItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0AF1922D28BA11E500FB9C96 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +110,7 @@
 		0AF1923828BA11E500FB9C96 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				0A2AF83D28C7C2CA009FD989 /* Model */,
 				0AF1923928BA11E500FB9C96 /* AppDelegate.swift */,
 				0AF1923B28BA11E500FB9C96 /* SceneDelegate.swift */,
 				0AF1923D28BA11E500FB9C96 /* ViewController.swift */,
@@ -268,6 +279,7 @@
 			files = (
 				0AF1923E28BA11E500FB9C96 /* ViewController.swift in Sources */,
 				0AF1923A28BA11E500FB9C96 /* AppDelegate.swift in Sources */,
+				0A2AF83F28C7C2DC009FD989 /* ToDoItem.swift in Sources */,
 				0AF1923C28BA11E500FB9C96 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
