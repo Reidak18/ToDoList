@@ -18,7 +18,5 @@ class ViewController: UIViewController {
             buildLabel.text = "Version \(appVersion)"
         }
     }
-    
-    
 }
 

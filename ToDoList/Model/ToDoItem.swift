@@ -77,8 +77,8 @@ extension ToDoItem {
         if importance != .common {
             dict["importance"] = importance.rawValue
         }
-        if deadline != nil {
-            let doubleInverval: Double = deadline!.timeIntervalSince1970
+        if let unwDeadline = deadline {
+            let doubleInverval: Double = unwDeadline.timeIntervalSince1970
             dict["deadline"] = doubleInverval
         }
         
