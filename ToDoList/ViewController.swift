@@ -14,9 +14,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            buildLabel.text = "Version \(appVersion)"
-        }
+//        if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
+//            buildLabel.text = "Version \(appVersion)"
+//        }
+    }
+    
+    @IBAction func addTask(_ sender: UIButton) {
+        let addTaskVC = AddTaskViewController(nibName: "AddTaskViewController", bundle: nil)
+        self.present(addTaskVC, animated: true, completion: nil)
     }
 }
 
