@@ -45,6 +45,10 @@ class AddTaskViewController: UIViewController {
 extension AddTaskViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         saveButton.isEnabled = textView.text.trimmingCharacters(in: [" ", "\n", "\t"]) != ""
+        
+        var frame = taskTextView.frame
+        frame.size.height = taskTextView.contentSize.height
+        taskTextView.frame = frame
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
