@@ -13,10 +13,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTaskViewController" customModule="ToDoList" customModuleProvider="target">
             <connections>
-                <outlet property="dateLabel" destination="CDa-oi-0Ly" id="fJc-Xy-ayv"/>
-                <outlet property="deadlineDatePicker" destination="0ag-qL-UWc" id="qr2-64-wRo"/>
-                <outlet property="saveButton" destination="viB-Ai-JKV" id="5Ah-ue-YeY"/>
-                <outlet property="taskTextView" destination="0da-GV-2TC" id="TpL-0a-A1T"/>
+                <outlet property="dateLabel" destination="Ipd-bW-lw6" id="aCS-ef-Lfh"/>
+                <outlet property="deadlineDatePicker" destination="OrN-WP-yei" id="QIH-yt-D9X"/>
+                <outlet property="saveButton" destination="ZkM-tx-1Fx" id="ApQ-42-942"/>
+                <outlet property="taskTextView" destination="woT-35-5sD" id="IJJ-YN-ndm"/>
                 <outlet property="view" destination="iN0-l3-epB" id="bmf-S4-upB"/>
             </connections>
         </placeholder>
@@ -25,121 +25,139 @@
             <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UhN-Bl-LgF">
-                    <rect key="frame" x="15" y="44" width="398" height="340.66666666666669"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hki-FR-RNr">
+                    <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGH-cQ-xOt">
-                            <rect key="frame" x="0.0" y="0.0" width="398" height="57"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HUA-aE-Q77">
+                            <rect key="frame" x="7" y="0.0" width="400" height="340.33333333333331"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9i2-Bo-AWi">
-                                    <rect key="frame" x="0.0" y="0.0" width="115.33333333333333" height="57"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Отменить">
-                                        <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                    </buttonConfiguration>
-                                    <connections>
-                                        <action selector="cancelAddingTask:" destination="-1" eventType="touchUpInside" id="QY3-t8-p3f"/>
-                                    </connections>
-                                </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="240" verticalHuggingPriority="251" text="Дело" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQt-nO-kYc">
-                                    <rect key="frame" x="115.33333333333334" y="0.0" width="160.00000000000003" height="57"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viB-Ai-JKV">
-                                    <rect key="frame" x="275.33333333333331" y="0.0" width="122.66666666666669" height="57"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Сохранить">
-                                        <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                    </buttonConfiguration>
-                                </button>
-                            </subviews>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="XGH-cQ-xOt" secondAttribute="height" multiplier="7:1" id="SJG-R3-xnV"/>
-                            </constraints>
-                        </stackView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0da-GV-2TC">
-                            <rect key="frame" x="0.0" y="77" width="398" height="33"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <color key="textColor" systemColor="labelColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToDounds" value="YES"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="10"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </textView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="8RO-uv-ZPe">
-                            <rect key="frame" x="0.0" y="130" width="398" height="124.33333333333331"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jxk-u5-zD5">
-                                    <rect key="frame" x="0.0" y="0.0" width="398" height="61"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fP-OL-nDR">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="57"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="251" text="Важность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qID-QP-7sv">
-                                            <rect key="frame" x="10" y="18.333333333333343" width="211" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYr-go-JcS">
+                                            <rect key="frame" x="0.0" y="0.0" width="115.33333333333333" height="57"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Отменить">
+                                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="cancelAddingTask:" destination="-1" eventType="touchUpInside" id="y7p-7T-5a5"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="240" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Дело" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OX-eM-2eM">
+                                            <rect key="frame" x="115.33333333333331" y="0.0" width="162" height="57"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pc6-W2-6Z8">
-                                            <rect key="frame" x="221" y="15" width="167" height="32"/>
-                                            <segments>
-                                                <segment title="" image="arrow.down" catalog="system"/>
-                                                <segment title="Нет"/>
-                                                <segment title="">
-                                                    <imageReference key="image" image="exclamationmark.2" catalog="system" renderingMode="original"/>
-                                                </segment>
-                                            </segments>
-                                        </segmentedControl>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkM-tx-1Fx">
+                                            <rect key="frame" x="277.33333333333331" y="0.0" width="122.66666666666669" height="57"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Сохранить">
+                                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                            </buttonConfiguration>
+                                        </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" secondItem="Jxk-u5-zD5" secondAttribute="height" multiplier="13:2" id="I9j-c8-5n5"/>
-                                        <constraint firstItem="Pc6-W2-6Z8" firstAttribute="width" secondItem="Jxk-u5-zD5" secondAttribute="height" multiplier="30:11" id="jka-Zw-BZv"/>
+                                        <constraint firstAttribute="width" secondItem="4fP-OL-nDR" secondAttribute="height" multiplier="7:1" id="1Of-kD-vFx"/>
                                     </constraints>
-                                    <edgeInsets key="layoutMargins" top="8" left="10" bottom="8" right="10"/>
+                                </stackView>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="woT-35-5sD">
+                                    <rect key="frame" x="0.0" y="77" width="400" height="33"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="textColor" systemColor="labelColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToDounds" value="YES"/>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                             <integer key="value" value="10"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SCQ-2a-gsi">
-                                    <rect key="frame" x="0.0" y="63" width="398" height="61.333333333333343"/>
+                                </textView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ty0-0D-EJV">
+                                    <rect key="frame" x="0.0" y="130" width="400" height="133.33333333333337"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cwQ-fI-Wvj">
-                                            <rect key="frame" x="10" y="18.666666666666657" width="329" height="24"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cBK-Sg-5Tc">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="61.666666666666664"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Сделать до" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irq-ZC-L3x">
-                                                    <rect key="frame" x="0.0" y="0.0" width="329" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="200" verticalHuggingPriority="251" text="Важность" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9e-5V-2Fs">
+                                                    <rect key="frame" x="10" y="19" width="212.33333333333334" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDa-oi-0Ly">
-                                                    <rect key="frame" x="0.0" y="0.0" width="329" height="0.0"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" name="AccentColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="dzA-mV-NCg">
+                                                    <rect key="frame" x="222.33333333333337" y="15.333333333333343" width="167.66666666666663" height="32"/>
+                                                    <segments>
+                                                        <segment title="" image="arrow.down" catalog="system"/>
+                                                        <segment title="Нет"/>
+                                                        <segment title="">
+                                                            <imageReference key="image" image="exclamationmark.2" catalog="system" renderingMode="original"/>
+                                                        </segment>
+                                                    </segments>
+                                                </segmentedControl>
                                             </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="cBK-Sg-5Tc" secondAttribute="height" multiplier="13:2" id="FIH-uh-Bg3"/>
+                                                <constraint firstItem="dzA-mV-NCg" firstAttribute="width" secondItem="cBK-Sg-5Tc" secondAttribute="height" multiplier="30:11" id="naQ-SP-VIa"/>
+                                            </constraints>
+                                            <edgeInsets key="layoutMargins" top="8" left="10" bottom="8" right="10"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToDounds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </stackView>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="J5Q-hP-IQp">
-                                            <rect key="frame" x="339" y="15.333333333333343" width="51" height="31"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ru6-ic-7bp">
+                                            <rect key="frame" x="0.0" y="71.666666666666657" width="400" height="61.666666666666657"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="NHO-Y9-yQv">
+                                                    <rect key="frame" x="10" y="18.666666666666686" width="331" height="24"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Сделать до" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zgt-ab-AZ9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="331" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipd-bW-lw6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="331" height="0.0"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" name="AccentColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tw1-hf-CZv">
+                                                    <rect key="frame" x="341" y="15.333333333333343" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="chooseDate:" destination="-1" eventType="valueChanged" id="QP3-5Z-95D"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Ru6-ic-7bp" secondAttribute="height" multiplier="13:2" id="lab-WO-KmB"/>
+                                            </constraints>
+                                            <edgeInsets key="layoutMargins" top="8" left="10" bottom="8" right="10"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToDounds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </stackView>
+                                        <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="OrN-WP-yei">
+                                            <rect key="frame" x="0.0" y="133.33333333333331" width="400" height="107.66666666666669"/>
                                             <connections>
-                                                <action selector="chooseDate:" destination="-1" eventType="valueChanged" id="9Ye-1w-jdA"/>
+                                                <action selector="dateValueChanged:" destination="-1" eventType="valueChanged" id="SWR-E8-elt"/>
                                             </connections>
-                                        </switch>
+                                        </datePicker>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="SCQ-2a-gsi" secondAttribute="height" multiplier="13:2" id="txm-Zh-XjV"/>
-                                    </constraints>
-                                    <edgeInsets key="layoutMargins" top="8" left="10" bottom="8" right="10"/>
+                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToDounds" value="YES"/>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -147,51 +165,49 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </stackView>
-                                <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="0ag-qL-UWc">
-                                    <rect key="frame" x="0.0" y="124.33333333333331" width="398" height="108"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ha6-oo-Zz9">
+                                    <rect key="frame" x="0.0" y="283.33333333333331" width="400" height="57"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Ha6-oo-Zz9" secondAttribute="height" multiplier="7:1" id="52V-8n-4Uk"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Удалить">
+                                        <color key="titleColor" systemColor="systemRedColor"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToDounds" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
-                                        <action selector="dateValueChanged:" destination="-1" eventType="valueChanged" id="1R9-uS-m6A"/>
+                                        <action selector="cancelAddingTask:" destination="-1" eventType="touchUpInside" id="4Fr-lV-y9m"/>
                                     </connections>
-                                </datePicker>
+                                </button>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToDounds" value="YES"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="10"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
                         </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNL-Lx-oC4">
-                            <rect key="frame" x="0.0" y="274.33333333333331" width="398" height="66.333333333333314"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="xNL-Lx-oC4" secondAttribute="height" multiplier="6:1" id="71E-Vs-LJ8"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="Удалить">
-                                <color key="titleColor" systemColor="systemRedColor"/>
-                            </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToDounds" value="YES"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="10"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="cancelAddingTask:" destination="-1" eventType="touchUpInside" id="PmM-Ie-ido"/>
-                            </connections>
-                        </button>
                     </subviews>
-                </stackView>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <constraints>
+                        <constraint firstItem="HUA-aE-Q77" firstAttribute="leading" secondItem="L0u-Qj-jl8" secondAttribute="leading" constant="7" id="3cf-OX-T1S"/>
+                        <constraint firstItem="HUA-aE-Q77" firstAttribute="trailing" secondItem="L0u-Qj-jl8" secondAttribute="trailing" constant="7" id="WMy-Mm-AFB"/>
+                        <constraint firstItem="HUA-aE-Q77" firstAttribute="bottom" secondItem="L0u-Qj-jl8" secondAttribute="bottom" id="hl7-VN-6dE"/>
+                        <constraint firstItem="HUA-aE-Q77" firstAttribute="top" secondItem="L0u-Qj-jl8" secondAttribute="top" id="jCy-E8-CQW"/>
+                        <constraint firstItem="HUA-aE-Q77" firstAttribute="width" secondItem="1v5-6b-pzN" secondAttribute="width" multiplier="0.934579" id="sz2-gF-6N4"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="L0u-Qj-jl8"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="1v5-6b-pzN"/>
+                </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="UhN-Bl-LgF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="2MN-u8-AiL"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UhN-Bl-LgF" secondAttribute="trailing" constant="15" id="KMf-xU-gOW"/>
-                <constraint firstItem="UhN-Bl-LgF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="d2t-mr-kgb"/>
+                <constraint firstItem="hki-FR-RNr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AUP-9o-rsY"/>
+                <constraint firstAttribute="bottom" secondItem="hki-FR-RNr" secondAttribute="bottom" id="oNj-4q-leX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hki-FR-RNr" secondAttribute="trailing" id="xRY-03-v3i"/>
+                <constraint firstItem="hki-FR-RNr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yHd-yh-Lql"/>
             </constraints>
             <point key="canvasLocation" x="89.719626168224295" y="64.794816414686835"/>
         </view>
@@ -210,6 +226,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
