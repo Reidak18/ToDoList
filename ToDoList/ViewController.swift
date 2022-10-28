@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addTask(_ sender: UIButton) {
-        let addTaskVC = AddTaskViewController(nibName: "AddTaskViewController", bundle: nil)
+        let addTaskVC = TaskListViewController(nibName: "TaskListViewController", bundle: nil)
         self.present(addTaskVC, animated: true, completion: nil)
     }
 }

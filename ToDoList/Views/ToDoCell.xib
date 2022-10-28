@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ToDoCell" customModule="ToDoList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="247" height="72"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="247" height="72"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="z9L-Fb-qjJ">
+                        <rect key="frame" x="10" y="0.0" width="237" height="72"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="u7V-pz-zIN">
+                                <rect key="frame" x="0.0" y="0.5" width="36" height="71"/>
+                                <color key="tintColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="u7V-pz-zIN" secondAttribute="height" multiplier="1:2" id="PsO-9E-sOZ"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hKa-2t-EbI">
+                                <rect key="frame" x="46" y="0.0" width="145" height="72"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GcM-Co-c1t">
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="41"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NlR-w6-IMx">
+                                                <rect key="frame" x="0.0" y="1" width="12.5" height="39"/>
+                                                <color key="tintColor" systemColor="systemRedColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWm-hR-0M1">
+                                                <rect key="frame" x="17.5" y="0.0" width="127.5" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-FS-Nnp">
+                                        <rect key="frame" x="0.0" y="51" width="145" height="21"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4pj-tp-wxL">
+                                                <rect key="frame" x="0.0" y="1" width="21" height="18.5"/>
+                                                <color key="tintColor" systemColor="systemGrayColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="4pj-tp-wxL" secondAttribute="height" multiplier="1:1" id="MCl-Et-mHL"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jag-sb-kx9">
+                                                <rect key="frame" x="26" y="0.0" width="119" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="4pj-tp-wxL" firstAttribute="height" secondItem="jag-sb-kx9" secondAttribute="height" id="7lv-QQ-cBi"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="greaterthan" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Rir-Eu-sCo">
+                                <rect key="frame" x="201" y="3" width="36" height="65.5"/>
+                                <color key="tintColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rir-Eu-sCo" secondAttribute="height" multiplier="1:2" id="xcT-Rv-3wV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="z9L-Fb-qjJ" secondAttribute="trailing" id="7zv-Ly-Ngp"/>
+                <constraint firstAttribute="bottom" secondItem="z9L-Fb-qjJ" secondAttribute="bottom" id="Ezs-b0-Irw"/>
+                <constraint firstItem="z9L-Fb-qjJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="F9i-0Q-RMX"/>
+                <constraint firstItem="z9L-Fb-qjJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jJA-0D-GAU"/>
+            </constraints>
+            <size key="customSize" width="247" height="72"/>
+            <connections>
+                <outlet property="deadlineDateLabel" destination="jag-sb-kx9" id="8Ki-LI-bFl"/>
+                <outlet property="deadlineView" destination="yp2-FS-Nnp" id="yTq-lo-gFx"/>
+                <outlet property="importantSign" destination="NlR-w6-IMx" id="iAR-lX-1GI"/>
+                <outlet property="statusImage" destination="u7V-pz-zIN" id="nyF-r2-zIT"/>
+                <outlet property="taskNameLabel" destination="cWm-hR-0M1" id="ti3-sB-KMl"/>
+            </connections>
+            <point key="canvasLocation" x="189" y="58"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="exclamationmark.2" catalog="system" width="88" height="128"/>
+        <image name="greaterthan" catalog="system" width="128" height="111"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

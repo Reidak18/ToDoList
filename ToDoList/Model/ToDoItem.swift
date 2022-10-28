@@ -18,6 +18,7 @@ struct ToDoItem {
     let text: String
     let importance: Importance
     let deadline: Date?
+    private var closed = false
     
     init(text: String, importance: Importance, deadline: Date? = nil) {
         self.init(id: UUID().uuidString, text: text, importance: importance, deadline: deadline)
@@ -28,6 +29,14 @@ struct ToDoItem {
         self.text = text
         self.importance = importance
         self.deadline = deadline
+    }
+    
+    mutating func closeTask() {
+        self.closed = true
+    }
+    
+    func isClosed() -> Bool {
+        return closed
     }
 }
 
